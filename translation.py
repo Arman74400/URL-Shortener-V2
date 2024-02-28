@@ -11,77 +11,68 @@ For example: <code>/batch -100xxx</code>
 I'll handle the rest and get those links shortened or converted in a short time! 💪
 """
 
-START_MESSAGE = '''**{},
-I am Royal Money Converter Bot. I Can Convert Links Directly From Your RoyalMoney.online Account,
+START_MESSAGE = """Hi there {} 
+
+Send me a link or post and I'll shorten it for you!
+
+To learn more about what I can do, just type /help.
+
+Method: {}
+Shortener website: {}
+"""
+
+HELP_MESSAGE = """Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
+
+I have a ton of handy features to help you out, such as:
+
+- [Hyperlink](https://t.me/{username}) support 🔗
+- Button conversion support 🔘
+- Domain inclusion and exclusion options 🌐
+- Header and footer text support 📝
+- Replace username function 📎
+- Banner image support 🖼️
+- Batch conversion for channel admins only 📊
+- Channel support for admins only 📢
+
+Useful commands:
+
+- /start: Start me up! You probably already used this.
+- /help: Send this message; I'll tell you more about myself!
+- /batch -100xxx: To shorten or convert all posts in your channel
+"""
+
+ABOUT_TEXT = """
+**My Details:**
+
+`🤖 Name:` ** {} **
     
-Go To** 👉 http://RoyalMoney.online/member/tools/api?connect=true
-**🤗 Than Hit Start If You're Redirected To Bot.**
+`📝 Language:` [Python 3](https://www.python.org/)
+`🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
+`👨‍💻 Developer:` [Dev](t.me/ask_admin001)
+`📢 Support:` [Talk Bot](https://t.me/ask_admin001)
+`🌐 Source Code:` [GitHub](https://github.com/kevinnadar22/URL-Shortener-V2/)
+"""
 
-Other Ways 👇
 
-1. **Go To** 👉 http://RoyalMoney.online/member/tools/api
-2. **Than Copy** API Key
-3. **Than Type** `/api` than give a single space and than paste your API Key
-**(see example to understand more...)**
-
-/api <space> API Key 
-(See Example.👇)
-**Example:**
- `/api 9c5a6c96077a1b499d8f953331221159383eb434 `
-
-**🤘 Hit** 👉 /features To Know More Features Of This Bot.
-**💁‍♀️ Hit** 👉 /help To Get Help.
-**➕ Hit** 👉 /channel To Get Help About Adding your channel to bot.
-**➕ Hit** 👉 /footer To Get Help About Adding your Custom Footer to bot.
-
-If You are new to Ziplinker.net then click on below button to create your account.'''
-
-HELP_MESSAGE = '''**{},**
-
-ɪ  ᴄᴀɴ  ᴄᴏɴᴠᴇʀᴛ  ᴀɴʏ  ᴅɪʀᴇᴄᴛ  ʟɪɴᴋ  ɪɴᴛᴏ  ʏᴏᴜʀ  ᴜʀʟ  ꜱʜᴏʀᴛᴇʀɴ  ʟɪɴᴋꜱ.
+METHOD_MESSAGE = """
+Current Method: {method}
     
-𝟏.  ɢᴏ  ᴛᴏ  👉  http://RoyalMoney.online/member/tools/api
-  
-𝟐.  ᴛʜᴀɴ  ᴄᴏᴘʏ  **ᴀᴘɪ  ᴋᴇʏ**
+Methods Available:
 
-𝟑.  ᴛʜᴀɴ  ᴛʏᴘᴇ  **/api  ʏᴏᴜʀ  ᴀᴘɪ  ᴋᴇʏ**
+> `mdlink` - Change all the links of the post to your MDisk account first and then short to {shortener} link.
 
+> `shortener` - Short all the links of the post to {shortener} link directly.
 
-🗣️   𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
+> `mdisk` - Save all the links of the post to your Mdisk account.
+    
+To change method, choose it from the following options:
+"""
 
-`/api 9c5a6c96077a1b499d8f953331221159383eb434 `
-
-
-🗣️  /features  ᴛᴏ  ᴋɴᴏᴡ  ᴍᴏʀᴇ  ꜰᴇᴀᴛᴜʀᴇꜱ  ᴏꜰ  ᴛʜɪꜱ  ʙᴏᴛ.
-
-𝐍𝐎𝐓𝐄 :  ꜰᴏʀ  ᴅᴇᴛᴀɪʟꜱ 👇 👇'''
-
-ABOUT_TEXT = '''**
-I am Royal Money Converter Bot. I Can Convert Links Directly From Your RoyalMoney.online Account,**
-
-**⚡Features⚡**
-
-**• I can Convert any links or posts to your RoyalMoney.online / post. (Button Links Posts, Hidden links/Hyperlinks All Are Supported)**
-
-**• I can Convert unlimited RoyalMoney.online links at once.** (if you are sending a list of urls.)
-
-**• No need to share password or email to convert links.**
-
-**• I Can auto add custom footer text to your every post. Hit 👉 /footer To know more...**
-
-**• I Can auto add custom Header text to your every post. Hit 👉 /Header To know more...**
-
-**• I Can replace / remove other's channel links with your channel link. Hit 👉 /channel To know More...**
-
-**• I Can Automatically Replace Your Banner Image To images in the post. Hit  👉/Banner_image To Know More...**
-
- Anyone who want to use any **other shortner** instead of RoyalMoney.online than **contact to owner** (all **shortners support** available.)'''
-
-CUSTOM_ALIAS_MESSAGE = """For Custom Alias, `[link] | [custom_alias]`, Send in this format
+CUSTOM_ALIAS_MESSAGE = """For custom alias, `[link] | [custom_alias]`, Send in this format
 
 This feature works only in private mode only
 
-Ex: https://t.me/Royal_Money_online | Royal Money"""
+Ex: https://t.me/example | Example"""
 
 
 ADMINS_MESSAGE = """
@@ -90,115 +81,149 @@ List of Admins who has access to this Bot
 {admin_list}
 """
 
-ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
 
+CHANNELS_LIST_MESSAGE = """
+Here is a list of the channels:
+
+{channels}"""
+
+
+HELP_REPLY_MARKUP = InlineKeyboardMarkup(
     [
-        InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ  ᴛ𝚘  𝙾ᴡɴᴇʀ  ❣️', url='https://telegram.me/Ak74400')
-        
-    ],
-
-
-])
-
-HELP_REPLY_MARKUP = InlineKeyboardMarkup([
-
-    [
-        InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ  ᴛ𝚘  𝙾ᴡɴᴇʀ  ❣️', url='https://t.me/Royal_Money_72')
-        
-    ],
-
-
-])
-
-START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
-    [
-        InlineKeyboardButton('🪄  Connect  To  RoyalMoney.online  ⚙️', url=f'http://Ziplinker.net/member/tools/api?connect=true')
+        [
+            InlineKeyboardButton("Methods", callback_data="method_command"),
+            InlineKeyboardButton("Batch", callback_data="cbatch_command"),
+        ],
+        [
+            InlineKeyboardButton("Custom Alias", callback_data="alias_conf"),
+            InlineKeyboardButton("Admins", callback_data="admins_list"),
+        ],
+        [
+            InlineKeyboardButton("Channels", callback_data="channels_list"),
+            InlineKeyboardButton("Home", callback_data="start_command"),
+        ],
     ]
-])
+)
 
 
-
-BACK_REPLY_MARKUP = InlineKeyboardMarkup([
+ABOUT_REPLY_MARKUP = InlineKeyboardMarkup(
     [
-        InlineKeyboardButton('Back', callback_data=f'help_command')
-    ],
+        [
+            InlineKeyboardButton("Home", callback_data="start_command"),
+            InlineKeyboardButton("Help", callback_data="help_command"),
+        ],
+        [InlineKeyboardButton("Close", callback_data="delete")],
+    ]
+)
 
-])
+START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton("Help", callback_data="help_command"),
+            InlineKeyboardButton("About", callback_data="about_command"),
+        ],
+        [
+            InlineKeyboardButton("Method", callback_data="method_command"),
+            InlineKeyboardButton("Close", callback_data="delete"),
+        ],
+    ]
+)
+
+METHOD_REPLY_MARKUP = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton(
+                "MDLINK", callback_data="change_method#mdlink"
+            ),
+            InlineKeyboardButton(
+                "Shortener", callback_data="change_method#shortener"
+            ),
+            InlineKeyboardButton("Mdisk", callback_data="change_method#mdisk"),
+        ],
+        [
+            InlineKeyboardButton("Back", callback_data="help_command"),
+            InlineKeyboardButton("Close", callback_data="delete"),
+        ],
+    ]
+)
+
+BACK_REPLY_MARKUP = InlineKeyboardMarkup(
+    [[InlineKeyboardButton("Back", callback_data="help_command")]]
+)
 
 USER_ABOUT_MESSAGE = """
-- Website: [{base_site}](http://RoyalMoney.online)
+🔧 Here are the current settings for this bot:
 
-- Site Link:
- {base_site}
+- 🌐 Shortener website: {base_site}
 
-- Current Linked API:
-{shortener_api}
+- 🧰 Method: {method}
 
-- Channel Username: 
-@{username}
+- 🔌 {base_site} API: {shortener_api}
 
-- Header Text: 
+- 💾 Mdisk API: {mdisk_api}
+
+- 📎 Username: @{username}
+
+- 📝 Header text:
 {header_text}
 
-- Footer Text: 
+- 📝 Footer text:
 {footer_text}
 
-- Banner Image: 
-{banner_image}
+🖼️ Banner image: {banner_image}
 """
 
+
+MDISK_API_MESSAGE = """To add or update your Mdisk API, \n`/mdisk_api mdisk_api`
+            
+Ex: `/mdisk_api 6LZq851sXoPHugiKQq`
+            
+Others Mdisk Links will be automatically changed to the API of this Mdisk account
+
+Get your Mdisk API from @VideoToolMoneyTreebot
+
+Current Mdisk API: `{}`"""
 
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
-`/api [api]`
+`/shortener_api [api]`
             
-Ex: `/api 9c5a6c96077a1b499d8f953331221159383eb434 `
+Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
 
-Get API From [{base_site}](http://RoyalMoney.online)
+Current Website: {base_site}
 
-Current: {base_site} 
-API: `{shortener_api}`"""
+To change your Shortener Website: /base_site
 
-HEADER_MESSAGE = """Reply to the Header Text You Want
+Current Shortener API: `{shortener_api}`"""
 
-This Text will be added to the top of every message caption or text
+HEADER_MESSAGE = """📝 To set the header text for every message caption or text, just reply with the text you want to use. You can use \\n to add a line break.
 
-For adding line break use \n
-To Remove Header Text: `/header remove`"""
+🗑 To remove the header text, use the following command:
 
-FOOTER_MESSAGE = """**Reply to the Footer Text You Want**
+`/header remove`
 
-This Text will be added to the **bottom** of every message **caption** or text
+This is a helpful way to add a consistent header to all of your messages. Enjoy! 🎉"""
 
-For adding **line break** use \n
-To Remove Footer Text: `/footer remove`
+FOOTER_MESSAGE = """📝 To set the footer text for every message caption or text, just reply with the text you want to use. You can use \\n to add a line break.
 
+🗑 To remove the footer text, use the following command:
 
-𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
+`/footer remove`
 
-`/footer
-━━━━━━━━━━━━━━━━━
-💁‍♀️ How To Download 👇
-👉 https://youtu.be/pYLm0G0
-━━━━━━━━━━━━━━━━━
-🔥 𝐉𝐨𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🔥
-👉 https://t.me/Royal_Money_online`
-"""
+This is a helpful way to add a consistent footer to all of your messages. Enjoy! 🎉"""
 
-USERNAME_TEXT = """**ᴘʟᴇᴀꜱᴇ  ᴛʏᴘᴇ  ɪɴ  ɢɪᴠᴇɴ  ꜰᴏʀᴍᴀᴛ
+USERNAME_TEXT = """Current username: {username}
 
-/channel (channel link or username)
+To set the username that will be automatically replaced with other usernames in the post, use the following command:
 
+`/username your_username`
 
-𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
+__(Note: Do not include the @ symbol in your username.)__
 
-/channel @Royal_Money_online
+To remove the current username, use the following command:
 
-𝐎𝐫
+`/username remove`
 
-`/channel https://t.me/Royal_Money_online`
-
-
-👉 /features  ᴛᴏ  ᴋɴᴏᴡ  ᴍᴏʀᴇ  ꜰᴇᴀᴛᴜʀᴇꜱ  ᴏꜰ  ᴛʜɪꜱ  ʙᴏᴛ."""
+This is a helpful way to make sure that all of your posts have a consistent username. Enjoy! 📎"""
 
 BANNER_IMAGE = """
 Usage: `/banner_image image_url` or reply to any Image with this command
@@ -207,12 +232,40 @@ This image will be automatically replaced with other images in the post
 
 To remove custom image, `/banner_image remove`
 
-Eg: `/banner_image https://telegra.ph/file/02f9e0843d26b1185c9e0.jpg`"""
+Eg: `/banner_image https://www.nicepng.com/png/detail/436-4369539_movie-logo-film.png`"""
 
+INCLUDE_DOMAIN_TEXT = """
+Use this option if you want to short only links from the following domains list.
+
+Current Include Domain:
+{}
+Usage: /include_domain domain
+Ex: `/include_domain t.me, stack.com`
+
+To remove a domain,
+Ex: `/include_domain remove t.me`
+
+To remove all domains,
+Ex: `/include_domain remove_all`
+"""
+
+EXCLUDE_DOMAIN_TEXT = """
+Use this option if you wish to short every link on your channel but exclude only the links from the following domains list
+
+Current Exclude Domains:
+{}
+Usage: /exclude_domain domain
+Ex: `/exclude_domain t.me, google.com`
+
+To remove a domain, 
+Ex: `/exclude_domain remove t.me`
+
+To remove all domains,
+Ex: `/exclude_domain remove_all`
+"""
 
 BANNED_USER_TXT = """
 Usage: `/ban [User ID]`
-
 Usage: `/unban [User ID]`
 
 List of users that are banned:
