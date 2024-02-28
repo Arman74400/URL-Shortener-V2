@@ -57,17 +57,26 @@ HELP_MESSAGE = '''**{},**
 
 𝐍𝐎𝐓𝐄 :  ꜰᴏʀ  ᴅᴇᴛᴀɪʟꜱ 👇 👇'''
 
-ABOUT_TEXT = """
-**My Details:**
+ABOUT_TEXT = '''**
+I am Royal Money Converter Bot. I Can Convert Links Directly From Your RoyalMoney.online Account,**
 
-`🤖 Name:` ** {} **
-    
-`📝 Language:` [Python 3](https://www.python.org/)
-`🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-`👨‍💻 Developer:` [Dev](t.me/ask_admin001)
-`📢 Support:` [Talk Bot](https://t.me/ask_admin001)
-`🌐 Source Code:` [GitHub](https://github.com/kevinnadar22/URL-Shortener-V2/)
-"""
+**⚡Features⚡**
+
+**• I can Convert any links or posts to your RoyalMoney.online / post. (Button Links Posts, Hidden links/Hyperlinks All Are Supported)**
+
+**• I can Convert unlimited RoyalMoney.online links at once.** (if you are sending a list of urls.)
+
+**• No need to share password or email to convert links.**
+
+**• I Can auto add custom footer text to your every post. Hit 👉 /footer To know more...**
+
+**• I Can auto add custom Header text to your every post. Hit 👉 /Header To know more...**
+
+**• I Can replace / remove other's channel links with your channel link. Hit 👉 /channel To know More...**
+
+**• I Can Automatically Replace Your Banner Image To images in the post. Hit  👉/Banner_image To Know More...**
+
+ Anyone who want to use any **other shortner** instead of RoyalMoney.online than **contact to owner** (all **shortners support** available.)'''
 
 
 METHOD_MESSAGE = """
