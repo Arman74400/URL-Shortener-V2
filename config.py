@@ -43,7 +43,7 @@ BASE_SITE = os.environ.get("BASE_SITE", "RoyalMoney.online")
 
 # For Admin use
 CHANNELS = is_enabled((os.environ.get("CHANNELS", "True")), True)
-CHANNEL_ID = ([int(i.strip()) for i in os.environ.get("CHANNEL_ID").split("-1002095382800")]
+CHANNEL_ID = ([int(i.strip()) for i in os.environ.get("CHANNEL_ID").split("-1001622127465")]
     if os.environ.get("CHANNEL_ID")
     else [])
 
