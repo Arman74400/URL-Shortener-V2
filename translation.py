@@ -25,10 +25,10 @@ Other Ways 👇
 3. **Than Type** `/api` than give a single space and than paste your API Key
 **(see example to understand more...)**
 
-/api <space> API Key 
+/shortner_api <space> API Key 
 (See Example.👇)
 **Example:**
- `/api 9c5a6c96077a1b499d8f953331221159383eb434 `
+ `/shortener_api 9c5a6c96077a1b499d8f953331221159383eb434 `
 
 **🤘 Hit** 👉 /features To Know More Features Of This Bot.
 **💁‍♀️ Hit** 👉 /help To Get Help.
@@ -45,12 +45,12 @@ HELP_MESSAGE = '''**{},**
   
 𝟐.  ᴛʜᴀɴ  ᴄᴏᴘʏ  **ᴀᴘɪ  ᴋᴇʏ**
 
-𝟑.  ᴛʜᴀɴ  ᴛʏᴘᴇ  **/api  ʏᴏᴜʀ  ᴀᴘɪ  ᴋᴇʏ**
+𝟑.  ᴛʜᴀɴ  ᴛʏᴘᴇ  **/shortner_api  ʏᴏᴜʀ  ᴀᴘɪ  ᴋᴇʏ**
 
 
 🗣️   𝐄𝐱𝐚𝐦𝐩𝐥𝐞:
 
-`/api 9c5a6c96077a1b499d8f953331221159383eb434 `
+`/shortner_api 9c5a6c96077a1b499d8f953331221159383eb434 `
 
 
 🗣️  /features  ᴛᴏ  ᴋɴᴏᴡ  ᴍᴏʀᴇ  ꜰᴇᴀᴛᴜʀᴇꜱ  ᴏꜰ  ᴛʜɪꜱ  ʙᴏᴛ.
